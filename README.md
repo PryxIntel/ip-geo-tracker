@@ -12,14 +12,11 @@ Features
 ✅ Logs lookups in ip_log.csv
 ✅ Exception logging in error_log.txt
 
- Tech Stack
-
+Tech Stack:
 Language: Python 3
 
 Libraries: requests, folium, tkinter
 
 APIs Used:
-
 ipinfo.io
-
 ip-api.com
