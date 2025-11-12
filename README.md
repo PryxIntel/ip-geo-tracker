@@ -15,3 +15,8 @@ Libraries: requests, folium, tkinter
 APIs Used:
 ipinfo.io
 ip-api.com
+
+Team: 
+
+    1. Priyanshu
+    2. Deepak
