@@ -1,466 +1,235 @@
-\# IP OSINT Investigation Tool 🔍
+# IP OSINT Investigation Tool 🔍
 
+An **Open Source Intelligence (OSINT)** cybersecurity tool that converts an IP address into a **detailed security investigation report**.
 
-
-An \*\*Open Source Intelligence (OSINT)\*\* cybersecurity tool that converts an IP address into a \*\*detailed security investigation report\*\*.
-
-
-
-This tool combines \*\*IP geolocation, threat intelligence, and VPN/proxy detection\*\* to help security analysts investigate suspicious IP addresses.
-
-
+This tool combines **IP geolocation, threat intelligence, and VPN/proxy detection** to help security analysts investigate suspicious IP addresses.
 
 ---
 
+# 🚀 Features
 
+## 🌍 IP Geolocation Tracking
 
-\# 🚀 Features
+* Retrieves **Country, Region, City, ISP, Timezone, and Coordinates**
+* Generates an **interactive map using Folium**
+* Saves the map locally for visual investigation
 
+## 🛡 Threat Intelligence
 
+* Integrates with the **AbuseIPDB API**
+* Detects whether the IP has been reported for:
 
-\## 🌍 IP Geolocation Tracking
+  * Malware activity
+  * Brute force attacks
+  * Spam
+  * Bot activity
 
-
-
-\* Retrieves \*\*Country, Region, City, ISP, Timezone, and Coordinates\*\*
-
-\* Generates an \*\*interactive map using Folium\*\*
-
-\* Saves the map locally for visual investigation
-
-
-
-\## 🛡 Threat Intelligence
-
-
-
-\* Integrates with the \*\*AbuseIPDB API\*\*
-
-\* Detects whether the IP has been reported for:
-
-
-
-&nbsp; \* Malware activity
-
-&nbsp; \* Brute force attacks
-
-&nbsp; \* Spam
-
-&nbsp; \* Bot activity
-
-
-
-\## 🔐 Network Security Analysis
-
-
+## 🔐 Network Security Analysis
 
 Detects whether the IP belongs to:
 
+* VPN
+* Proxy
+* Tor Exit Node
+* Hosting Provider
 
+## 📄 Automated Investigation Reports
 
-\* VPN
+Automatically generates **clean text reports** containing:
 
-\* Proxy
+* IP Information
+* Geolocation
+* Security Analysis
+* Threat Intelligence Summary
 
-\* Tor Exit Node
+All outputs are automatically organized inside the **`reports/` directory**.
 
-\* Hosting Provider
-
-
-
-\## 📄 Automated Investigation Reports
-
-
-
-Automatically generates \*\*clean text reports\*\* containing:
-
-
-
-\* IP Information
-
-\* Geolocation
-
-\* Security Analysis
-
-\* Threat Intelligence Summary
-
-
-
-All outputs are automatically organized inside the \*\*`reports/` directory\*\*.
-
-
-
-\## 🖥 Dual Interface
-
-
+## 🖥 Dual Interface
 
 Supports both:
 
-
-
-\* \*\*Command Line Interface (CLI)\*\*
-
-\* \*\*GUI Interface (Tkinter)\*\*
-
-
+* **Command Line Interface (CLI)**
+* **GUI Interface (Tkinter)**
 
 ---
 
+# ⚙️ Setup & Installation
 
-
-\# ⚙️ Setup \& Installation
-
-
-
-\## 1️⃣ Clone the Repository
-
-
+## 1️⃣ Clone the Repository
 
 ```bash
-
 git clone https://github.com/PryxIntel/ip-geo-tracker.git
-
 cd ip-geo-tracker
-
 ```
-
-
 
 ---
 
-
-
-\## 2️⃣ Set Up Virtual Environment \& Install Libraries
-
-
+## 2️⃣ Set Up Virtual Environment & Install Libraries
 
 Create a virtual environment:
 
-
-
 ```bash
-
 python -m venv venv
-
 ```
-
-
 
 Activate the environment:
 
-
-
-\### Windows
-
-
+### Windows
 
 ```bash
-
-venv\\Scripts\\activate
-
+venv\Scripts\activate
 ```
 
-
-
-\### Mac / Linux
-
-
+### Mac / Linux
 
 ```bash
-
 source venv/bin/activate
-
 ```
-
-
 
 Install dependencies:
 
-
-
 ```bash
-
 pip install -r requirements.txt
-
 ```
-
-
 
 ---
 
-
-
-\## 3️⃣ Configure API Keys
-
-
+## 3️⃣ Configure API Keys
 
 Create a `.env` file in the project root directory.
 
-
-
 Example:
 
-
-
 ```text
-
-ABUSEIPDB\_API\_KEY=your\_key\_here
-
-IPScore\_API\_KEY=your\_key\_here
-
+ABUSEIPDB_API_KEY=your_key_here
+IPScore_API_KEY=your_key_here
 ```
 
-
-
-These API keys will be automatically loaded using \*\*python-dotenv\*\*.
-
-
+These API keys will be automatically loaded using **python-dotenv**.
 
 ---
 
+# 🔑 APIs Used
 
+## AbuseIPDB
 
-\# 🔑 APIs Used
+Used for **malicious IP reputation detection and threat intelligence scoring**.
 
-
-
-\## AbuseIPDB
-
-
-
-Used for \*\*malicious IP reputation detection and threat intelligence scoring\*\*.
-
-
+Website:
+https://www.abuseipdb.com
 
 ---
 
-
-
-\## IPScore API
-
-
+## IPScore API
 
 Used to detect:
 
-
-
-\* VPN usage
-
-\* Proxy servers
-
-\* Tor exit nodes
-
-\* Hosting providers
-
-
+* VPN usage
+* Proxy servers
+* Tor exit nodes
+* Hosting providers
 
 ---
 
+# 🧪 Example Output
 
+### CLI Investigation Report
 
-\# 🧪 Example Output
-
-
-
-\### CLI Investigation Report
-
-
-
-`reports/investigation\_report\_8\_8\_8\_8.txt`
-
-
+`reports/investigation_report_8_8_8_8.txt`
 
 ```
-
 === SECURITY INVESTIGATION REPORT ===
 
-
-
 Target IP : 8.8.8.8
-
 Date      : 2026-03-12 12:00:00 UTC
 
-
-
-\[ 1. IP INFORMATION \& GEOLOCATION ]
-
-
+[ 1. IP INFORMATION & GEOLOCATION ]
 
 City      : Mountain View
-
 Region    : California
-
 Country   : US
-
 ISP/Org   : Google LLC
 
-
-
-\[ 2. NETWORK SECURITY ANALYSIS ]
-
-
+[ 2. NETWORK SECURITY ANALYSIS ]
 
 VPN       : False
-
 Proxy     : False
-
 Tor Node  : False
 
-
-
-\[ 3. THREAT INTELLIGENCE (AbuseIPDB) ]
-
-
+[ 3. THREAT INTELLIGENCE (AbuseIPDB) ]
 
 Confidence Score : 0%
-
 Total Reports    : 0
-
 Last Reported    : N/A
-
 ```
-
-
 
 ---
 
-
-
-\# 📁 Project Structure
-
-
+# 📁 Project Structure
 
 ```
-
 ip-geo-tracker/
-
 │
-
-├── core\_engine.py       # Core OSINT logic and API integration
-
+├── core_engine.py       # Core OSINT logic and API integration
 ├── main.py              # CLI and GUI application router
-
 ├── requirements.txt     # Python dependencies
-
 ├── README.md            # Project documentation
-
 │
-
 ├── reports/             # Auto-generated investigation outputs
-
-│   ├── investigation\_report\_8\_8\_8\_8.txt
-
-│   └── map\_8\_8\_8\_8.html
-
+│   ├── investigation_report_8_8_8_8.txt
+│   └── map_8_8_8_8.html
 │
-
 ├── .env                 # API keys (ignored by Git)
-
 └── .gitignore           # Git ignore rules
-
 ```
 
+---
 
+# 🛠 Technologies Used
+
+* Python 3
+* Requests (API communication)
+* Folium (interactive mapping)
+* Tkinter (GUI)
+* python-dotenv (environment variable management)
 
 ---
 
-
-
-\# 🛠 Technologies Used
-
-
-
-\* Python 3
-
-\* Requests (API communication)
-
-\* Folium (interactive mapping)
-
-\* Tkinter (GUI)
-
-\* python-dotenv (environment variable management)
-
-
-
----
-
-
-
-\# 📌 Use Cases
-
-
+# 📌 Use Cases
 
 This tool can be used for:
 
-
-
-\* Cybersecurity investigations
-
-\* OSINT research
-
-\* Threat intelligence analysis
-
-\* SOC analyst workflows
-
-\* Network monitoring
-
-
+* Cybersecurity investigations
+* OSINT research
+* Threat intelligence analysis
+* SOC analyst workflows
+* Network monitoring
 
 ---
 
+# ⚠️ Disclaimer
 
-
-\# ⚠️ Disclaimer
-
-
-
-This tool is intended \*\*for educational and cybersecurity research purposes only\*\*.
-
-
+This tool is intended **for educational and cybersecurity research purposes only**.
 
 Unauthorized or illegal investigations are strictly discouraged.
 
-
-
 ---
 
+# 👨‍💻 Author
 
-
-\# 👨‍💻 Author
-
-
-
-Developed by \*\*Priyanshu Singh Chauhan (PryxIntel)\*\*
-
-
+Developed by **Priyanshu Singh Chauhan (PryxIntel)**
 
 GitHub:
-
 https://github.com/PryxIntel
-
-
 
 ---
 
-
-
-\# ⭐ Future Improvements
-
-
+# ⭐ Future Improvements
 
 Planned upgrades for future releases:
 
-
-
-\* ASN lookup
-
-\* WHOIS lookup
-
-\* Shodan integration
-
-\* Port scanning
-
-\* Web dashboard integration
-
-
-
+* ASN lookup
+* WHOIS lookup
+* Shodan integration
+* Port scanning
+* Web dashboard integration
