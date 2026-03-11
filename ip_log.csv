@@ -1,3 +1,12 @@
 timestamp,ip,city,region,country,org,timezone,loc
 2025-11-11T19:00:23.665145,8.8.8.8,Ashburn,Virginia,US,Google LLC,America/New_York,"39.03,-77.5"
 2025-11-11T19:00:31.103700,14.139.233.50,Bhopal,Madhya Pradesh,IN,National Knowledge Network,Asia/Kolkata,"23.2505,77.4065"
+2025-11-12T06:48:04.911330,8.8.8.8,Ashburn,Virginia,US,Google LLC,America/New_York,"39.03,-77.5"
+2025-11-12T06:50:05.042503,152.56.147.185,Varanasi,Uttar Pradesh,IN,AS55836 Reliance Jio Infocomm Limited,Asia/Kolkata,"25.3167,83.0104"
+2025-11-12T07:30:33.633868,8.8.8.8,Mountain View,California,US,AS15169 Google LLC,America/Los_Angeles,"37.4056,-122.0775"
+2025-11-12T07:31:34.760015,152.56.147.123,Varanasi,Uttar Pradesh,IN,AS55836 Reliance Jio Infocomm Limited,Asia/Kolkata,"25.3167,83.0104"
+2025-11-12T07:32:44.496540,172.217.22.14,Mountain View,California,US,AS15169 Google LLC,America/Los_Angeles,"38.0088,-122.1175"
+2025-11-28T13:41:13.032362,14.139.233.50,Bhopal,Madhya Pradesh,IN,National Knowledge Network,Asia/Kolkata,"23.2505,77.4065"
+2025-12-02T16:56:11.102374,14.139.233.50,Bhopal,Madhya Pradesh,IN,National Knowledge Network,Asia/Kolkata,"23.2505,77.4065"
+2025-12-02T16:56:41.919046,42.105.155.217,Basti,Uttar Pradesh,IN,Vodafone Idea Ltd.,Asia/Kolkata,"26.7882,82.7162"
+2026-01-12T17:55:18.493407,14.139.233.50,Sahāranpur,Uttar Pradesh,IN,National Knowledge Network,Asia/Kolkata,"29.9654,77.5428"
