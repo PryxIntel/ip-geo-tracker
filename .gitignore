@@ -1,7 +1,11 @@
 .env
+.env.example
 venv/
 __pycache__/
 reports/
 *.html
 *.csv
 *.txt
+build/
+dist/
+*.spec
